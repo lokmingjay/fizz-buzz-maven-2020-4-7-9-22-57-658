@@ -29,4 +29,14 @@ public class FizzBuzzTest {
         assertEquals("Fizz", result);
     }
 
+    @Test
+    public void should_return_buzz_when_input_number_is_multiples_of_five(){
+        //give
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        //when
+        String result = fizzBuzz.play(5);
+        //then
+        assertEquals("Buzz", result);
+
+    }
 }
