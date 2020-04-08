@@ -6,8 +6,6 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThat;
 
 public class FizzBuzzTest {
-
-
     @Test
     public void should_return_number_when_input_normal_number() {
         //give
@@ -16,11 +14,10 @@ public class FizzBuzzTest {
         String result = fizzBuzz.play(2);
         //then
         assertEquals("2", result);
-
-}
+    }
 
     @Test
-    public void should_return_fizz_when_input_number_is_multiples_of_three(){
+    public void should_return_fizz_when_input_number_is_multiples_of_three() {
         //give
         FizzBuzz fizzBuzz = new FizzBuzz();
         //when
@@ -30,13 +27,22 @@ public class FizzBuzzTest {
     }
 
     @Test
-    public void should_return_buzz_when_input_number_is_multiples_of_five(){
+    public void should_return_buzz_when_input_number_is_multiples_of_five() {
         //give
         FizzBuzz fizzBuzz = new FizzBuzz();
         //when
         String result = fizzBuzz.play(5);
         //then
         assertEquals("Buzz", result);
+    }
 
+    @Test
+    public void should_return_fizzbuzz_when_input_number_is_multiples_of_five_and_three() {
+        //give
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        //when
+        String result = fizzBuzz.play(15);
+        //then
+        assertEquals("FizzBuzz", result);
     }
 }
